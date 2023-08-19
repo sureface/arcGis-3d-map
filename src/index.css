@@ -1,0 +1,34 @@
+@import "https://js.arcgis.com/4.27/@arcgis/core/assets/esri/themes/dark/main.css";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+.viewDiv {
+  height: 100vh;
+  width: 100%;
+}
+.map-controllers {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 80%;
+  width: 250px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.map-btns {
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .5);
+  padding: 10px 10px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: sans-serif;
+  cursor: pointer;
+}
