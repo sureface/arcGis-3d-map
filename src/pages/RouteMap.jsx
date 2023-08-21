@@ -3,6 +3,7 @@ import  SceneView from "@arcgis/core/views/SceneView"
 import Map from '@arcgis/core/Map'
 import GraphicsLayer from "@arcgis/core/layers/GraphicsLayer"
 import Graphic from '@arcgis/core/Graphic'
+import Search from '@arcgis/core/widgets/Search'
 import RouteParameters from "@arcgis/core/rest/support/RouteParameters"
 import FeatureSet from "@arcgis/core/rest/support/FeatureSet"
 import * as route from "@arcgis/core/rest/route"
@@ -66,6 +67,16 @@ const RouteMap = () => {
         map: map1,
         center: [65.08086,41.86843],
         zoom: 6
+    });
+
+
+    const searchWidget = new Search({
+      view: view
+    });
+
+    // Add the search widget to the top right corner of the view
+    view.ui.add(searchWidget, {
+      position: "top-left",
     });
 
     // the symbol used to mark stops on the route
@@ -194,7 +205,7 @@ const RouteMap = () => {
     }
 
   return (
-    <div class="map-wrapper" style={{'padding':'0px'}} >
+    <div className="map-wrapper" style={{'padding':'0px'}} >
 
         <div ref={map} style={{"height":"100vh", "width":"100%", "margin":"0px","padding":'0px'}}></div>
 
